@@ -551,6 +551,103 @@ header .navbar-collapse {
     display: none;
 }
 
+.area-checkup {
+    padding: 60px 0;
+    background-image: url(../img/ckp-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.area-checkup .selo {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.area-checkup .selo img {
+    display: block;
+    margin: 0 auto;
+}
+
+.area-checkup .pacote-checkup {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 20px 20px 0 20px;
+    -webkit-box-shadow: 0 0 10px 2px rgba(0,0,0,0.08);
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.08);
+}
+
+.area-checkup .pacote-checkup h3 {
+    font-size: 24px;
+}
+
+.area-checkup .pacote-checkup .qtde-procedimentos {
+    font-size: 16px;
+    font-weight: 300;
+    color: #6C6A6C;
+    margin-bottom: 10px;
+}
+
+.area-checkup .pacote-checkup ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.area-checkup .pacote-checkup ul li p {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 2px;
+}
+
+.area-checkup .pacote-checkup ul li p strong {
+    font-weight: 600;
+}
+
+.area-checkup .pacote-checkup .valor {
+    border-top: 3px solid #D8D8D8;
+    padding-top: 20px;
+    margin-top: 20px;
+    color: #787878;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.area-checkup .pacote-checkup .valor p {
+    margin-bottom: 0;
+}
+
+.area-checkup .pacote-checkup .valor .txt-auxiliar {
+    margin-top: 8px;
+}
+
+.area-checkup .pacote-checkup .valor .vlr-mercado {
+    font-size: 20px;
+}
+
+.area-checkup .pacote-checkup .valor .vlr-drhj {
+    color: #1474BB;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.area-checkup .pacote-checkup .btn {
+    width: 108%;
+    margin-left: -20px;
+    border-radius: 0 0 6px 6px;
+    padding: 15px!important;
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.area-checkup .pacote-checkup .btn-agendar-plano-1 {
+    background-color: #1474BB;
+}
+
+.area-checkup .pacote-checkup .btn-agendar-plano-2 {
+    background-color: #D0021B;
+}
+
 .area-vantagens {
     padding: 60px 0;
 }
