@@ -498,6 +498,11 @@
                     </div>
                 </div>
             </div>
+            <div id="checkup" class="area-checkup">
+                <div class="container">
+                    Checkup
+                </div>
+            </div>
             <div id="vantagens" class="area-vantagens">
                 <div class="container">
                     <div class="titulo-home">
