@@ -27,83 +27,88 @@
                             <p class="tit-box-pc">Resumo dos próximos agendamentos</p>
                             <div class="row">
                                 @foreach($agendamentos_home as $agendamento)
-									@if(!is_null($agendamento->atendimento_id))
-										<div class="proxima-consulta col-sm-12 col-md-6">
-											<div class="area-pc">
-												<div class="tit-pc">
-													{{--<p>Sua próxima consulta é</p>--}}
-													<p class="data-consulta">
-														Dia {{ date('d', strtotime($agendamento->getRawDtAtendimentoAttribute()))}}
-														de {{ strftime('%B', strtotime($agendamento->getRawDtAtendimentoAttribute())) }}
-														às <span>{{ date('H', strtotime($agendamento->getRawDtAtendimentoAttribute())) }}h
-															@if(date('i', strtotime($agendamento->getRawDtAtendimentoAttribute())) != '00')
-																e {{ date('i', strtotime($agendamento->getRawDtAtendimentoAttribute())) }}min. @endif</span></p>
-												</div>
-												<div class="resumo">
-													<div class="nome-status">
-														<div class="row">
-															<div class="col-6">
-																<p class="beneficiario">{{ $agendamento->paciente->nm_primario }}</p>
-															</div>
-															<div class="col-6">
-																@if($agendamento->getRawCsStatusAttribute() == 10)
-																	<span class="status pre-agendado">Pré-Agendado</span>
-																@elseif($agendamento->getRawCsStatusAttribute() == 20)
-																	<span class="status confirmado">Confirmado</span>
-																@elseif($agendamento->getRawCsStatusAttribute() == 30)
-																	<span class="status nao-confirmado">Não Confirmado</span>
-																@elseif($agendamento->getRawCsStatusAttribute() == 40)
-																	<span class="status finalizado">Finalizado</span>
-																@elseif($agendamento->getRawCsStatusAttribute() == 50)
-																	<span class="status ausente">Não compareceu</span>
-																@elseif($agendamento->getRawCsStatusAttribute() == 60)
-																	<span class="status cancelado">Cancelado</span>
-																@elseif($agendamento->getRawCsStatusAttribute() == 70)
-																	<span class="status agendado">Agendado</span>
-																@elseif($agendamento->getRawCsStatusAttribute() == 80)
-																	<span class="status retorno">Retorno de Consulta</span>
-																@endif
-															</div>
-														</div>
-													</div>
-													<p class="tipo">
-														<span><strong>Procedimento:</strong> {{ $agendamento->atendimento->ds_preco }}</span>
-														<br>
-														<span><strong>Prestador:</strong> {{ $agendamento->clinica->nm_fantasia }}</span>
-													</p>
-													{{--<p class="profissional">
-														Dr. {{ $agendamento->profissional->nm_primario.' '.$agendamento->profissional->nm_secundario }}</p>
-													<p class="valor">R$ <span>{{ $agendamento->valor_total }}</span></p>--}}
-													<p class="endereco">
-														<strong>Endereço:</strong> {{ $agendamento->endereco_completo }}</p>
-												</div>
-											</div>
-										</div>
-									@elseif(!is_null($agendamento->checkup_id))
-										<div class="proxima-consulta col-sm-12 col-md-6">
-											<div class="area-pc">
-												<div class="tit-pc">
-													<p class="data-consulta">Checkup</p>
-												</div>
-												<div class="resumo">
-													<div class="nome-status">
-														<div class="row">
-															<div class="col-12">
-																<p class="beneficiario">{{$agendamento->paciente->nm_primario}}</p>
-															</div>
-														</div>
-													</div>
-													<p class="tipo">
-														<span>Checkup {{$agendamento->checkup->titulo}} - {{ucfirst($agendamento->checkup->tipo)}}</span>
-													</p>
-													{{--<p class="profissional">
-														Dr. {{ $agendamento->profissional->nm_primario.' '.$agendamento->profissional->nm_secundario }}</p>
-													<p class="valor">R$ <span>{{ $agendamento->valor_total }}</span></p>--}}
-													<a href="{{url('meus-agendamentos#checkup')}}" class="link-detalhes-checkup">Clique aqui para ver todos os detalhes do Checkup</a>
-												</div>
-											</div>
-										</div>
-									@endif
+                                    @if(!is_null($agendamento->atendimento_id))
+                                        <div class="proxima-consulta col-sm-12 col-md-6">
+                                            <div class="area-pc">
+                                                <div class="tit-pc">
+                                                    {{--<p>Sua próxima consulta é</p>--}}
+                                                    <p class="data-consulta">
+                                                        Dia {{ date('d', strtotime($agendamento->getRawDtAtendimentoAttribute()))}}
+                                                        de {{ strftime('%B', strtotime($agendamento->getRawDtAtendimentoAttribute())) }}
+                                                        às <span>{{ date('H', strtotime($agendamento->getRawDtAtendimentoAttribute())) }}
+                                                            h
+                                                            @if(date('i', strtotime($agendamento->getRawDtAtendimentoAttribute())) != '00')
+                                                                e {{ date('i', strtotime($agendamento->getRawDtAtendimentoAttribute())) }}
+                                                                min. @endif</span></p>
+                                                </div>
+                                                <div class="resumo">
+                                                    <div class="nome-status">
+                                                        <div class="row">
+                                                            <div class="col-6">
+                                                                <p class="beneficiario">{{ $agendamento->paciente->nm_primario }}</p>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                @if($agendamento->getRawCsStatusAttribute() == 10)
+                                                                    <span class="status pre-agendado">Pré-Agendado</span>
+                                                                @elseif($agendamento->getRawCsStatusAttribute() == 20)
+                                                                    <span class="status confirmado">Confirmado</span>
+                                                                @elseif($agendamento->getRawCsStatusAttribute() == 30)
+                                                                    <span class="status nao-confirmado">Não Confirmado</span>
+                                                                @elseif($agendamento->getRawCsStatusAttribute() == 40)
+                                                                    <span class="status finalizado">Finalizado</span>
+                                                                @elseif($agendamento->getRawCsStatusAttribute() == 50)
+                                                                    <span class="status ausente">Não compareceu</span>
+                                                                @elseif($agendamento->getRawCsStatusAttribute() == 60)
+                                                                    <span class="status cancelado">Cancelado</span>
+                                                                @elseif($agendamento->getRawCsStatusAttribute() == 70)
+                                                                    <span class="status agendado">Agendado</span>
+                                                                @elseif($agendamento->getRawCsStatusAttribute() == 80)
+                                                                    <span class="status retorno">Retorno de Consulta</span>
+                                                                @endif
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="tipo">
+                                                        <span><strong>Procedimento:</strong> {{ $agendamento->atendimento->ds_preco }}</span>
+                                                        <br>
+                                                        <span><strong>Prestador:</strong> {{ $agendamento->clinica->nm_fantasia }}</span>
+                                                    </p>
+                                                    {{--<p class="profissional">
+                                                        Dr. {{ $agendamento->profissional->nm_primario.' '.$agendamento->profissional->nm_secundario }}</p>
+                                                    <p class="valor">R$ <span>{{ $agendamento->valor_total }}</span></p>--}}
+                                                    <p class="endereco">
+                                                        <strong>Endereço:</strong> {{ $agendamento->endereco_completo }}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @elseif(!is_null($agendamento->checkup_id))
+                                        <div class="proxima-consulta col-sm-12 col-md-6">
+                                            <div class="area-pc">
+                                                <div class="tit-pc">
+                                                    <p class="data-consulta">Checkup</p>
+                                                </div>
+                                                <div class="resumo">
+                                                    <div class="nome-status">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <p class="beneficiario">{{$agendamento->paciente->nm_primario}}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="tipo">
+                                                        <span>Checkup {{$agendamento->checkup->titulo}}
+                                                            - {{ucfirst($agendamento->checkup->tipo)}}</span>
+                                                    </p>
+                                                    {{--<p class="profissional">
+                                                        Dr. {{ $agendamento->profissional->nm_primario.' '.$agendamento->profissional->nm_secundario }}</p>
+                                                    <p class="valor">R$ <span>{{ $agendamento->valor_total }}</span></p>--}}
+                                                    <a href="{{url('meus-agendamentos#checkup')}}" class="link-detalhes-checkup">Clique
+                                                        aqui para ver todos os detalhes do Checkup</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endif
                                 @endforeach
                             </div>
                         </div>
@@ -173,11 +178,15 @@
                         <div class="item"><img src="/libs/home-template/img/parceiros/biocardios.png" alt=""></div>
                         <div class="item"><img src="/libs/home-template/img/parceiros/biovida.png" alt=""></div>
                         <div class="item"><img src="/libs/home-template/img/parceiros/cardio-fitness.png" alt=""></div>
-                        <div class="item"><img src="/libs/home-template/img/parceiros/centro-clinico-lorena-de-fatima.png" alt=""></div>
+                        <div class="item">
+                            <img src="/libs/home-template/img/parceiros/centro-clinico-lorena-de-fatima.png" alt="">
+                        </div>
                         <div class="item"><img src="/libs/home-template/img/parceiros/cimed.png" alt=""></div>
                         <div class="item"><img src="/libs/home-template/img/parceiros/cinthia-rojas.png" alt=""></div>
-                        <div class="item"><img src="/libs/home-template/img/parceiros/clinica-fisio-evidence.png" alt=""></div>
-                        <div class="item"><img src="/libs/home-template/img/parceiros/clinica-vila-rica.png" alt=""></div>
+                        <div class="item">
+                            <img src="/libs/home-template/img/parceiros/clinica-fisio-evidence.png" alt=""></div>
+                        <div class="item"><img src="/libs/home-template/img/parceiros/clinica-vila-rica.png" alt="">
+                        </div>
                         <div class="item"><img src="/libs/home-template/img/parceiros/cliped.png" alt=""></div>
                         <div class="item"><img src="/libs/home-template/img/parceiros/crb.png" alt=""></div>
                         <div class="item"><img src="/libs/home-template/img/parceiros/digidoc.png" alt=""></div>
@@ -190,12 +199,14 @@
                         <div class="item"><img src="/libs/home-template/img/parceiros/ila.png" alt=""></div>
                         <div class="item"><img src="/libs/home-template/img/parceiros/implante-vida.png" alt=""></div>
                         <div class="item"><img src="/libs/home-template/img/parceiros/infinita.png" alt=""></div>
-                        <div class="item"><img src="/libs/home-template/img/parceiros/instituto-mulher.png" alt=""></div>
+                        <div class="item"><img src="/libs/home-template/img/parceiros/instituto-mulher.png" alt="">
+                        </div>
                         <div class="item"><img src="/libs/home-template/img/parceiros/icb.png" alt=""></div>
                         <div class="item"><img src="/libs/home-template/img/parceiros/dermaline.png" alt=""></div>
                         <div class="item"><img src="/libs/home-template/img/parceiros/sabin.png" alt=""></div>
                         <div class="item"><img src="/libs/home-template/img/parceiros/micra.png" alt=""></div>
-                        <div class="item"><img src="/libs/home-template/img/parceiros/policlinica-mais.png" alt=""></div>
+                        <div class="item"><img src="/libs/home-template/img/parceiros/policlinica-mais.png" alt="">
+                        </div>
                         <div class="item"><img src="/libs/home-template/img/parceiros/santa-paula.png" alt=""></div>
                         <div class="item"><img src="/libs/home-template/img/parceiros/visao.png" alt=""></div>
                     </div>
@@ -210,7 +221,6 @@
                     <ol class="carousel-indicators">
                         <li data-target="#carouselBannerHome" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselBannerHome" data-slide-to="1"></li>
-                        <li data-target="#carouselBannerHome" data-slide-to="2"></li>
                     </ol>
                     <div class="carousel-inner" role="listbox">
 
@@ -220,20 +230,6 @@
                                     <div class="texto">
                                         <h3>Conheça o novo jeito de cuidar da sua saúde</h3>
                                         <p>Agende consultas e exames.<br> É simples, é rápido, é online!</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item" style="background-image: url('/libs/home-template/img/banner_home_cupom.jpg')">
-                            <div class="carousel-caption">
-                                <div class="area-cupom">
-                                    <img src="/libs/home-template/img/cupom.png" alt="">
-                                </div>
-                                <div class="area-texto area-texto-cupom">
-                                    <div class="texto texto-cupom">
-                                        <h3>Use o código: <span><br>DOCTOR10<br></span>e ganhe 10% na<br>primeira
-                                            consulta.</h3>
                                     </div>
                                 </div>
                             </div>
@@ -428,6 +424,97 @@
                     </div>
                 </div>
             </div>
+            <div id="checkup" class="area-checkup">
+                <div class="container">
+                    <div class="selo">
+                        <img src="/libs/home-template/img/ckp-selo.png" alt="">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-lg-6">
+                            <div class="pacote-checkup">
+                                <div class="resumo">
+                                    <div class="textos">
+                                        <h3>CheckUp Masculino</h3>
+                                        <p class="qtde-procedimentos">9 Procedimentos</p>
+                                        <ul>
+                                            <li>
+                                                <p><strong>1 Consulta:</strong> Consulta urológica</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>7 Exames:</strong> Creatina; Lipidograma; Glicemia de Jejum;
+                                                    Hemograma Completo; TGO; TGP; Urina I</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>1 Imagem:</strong> Ultrassom da prostata</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="valor">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <p class="vlr-mercado"><strike>R$ 610,00</strike></p>
+                                                <p>valor de mercado</p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <p class="txt-auxiliar">a partir de</p>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <p class="vlr-drhj">R$ 350,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="area-btn">
+                                    <a href="/resultado-checkup?tipo_atendimento=checkup&tipo_especialidade=1&local_atendimento=TODOS&endereco_id="><button type="button" class="btn btn-agendar-plano-1">Agendar</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <div class="pacote-checkup">
+                                <div class="resumo">
+                                    <div class="textos">
+                                        <h3>CheckUp Feminino</h3>
+                                        <p class="qtde-procedimentos">12 Procedimentos</p>
+                                        <ul>
+                                            <li>
+                                                <p><strong>1 Consulta:</strong> Consulta ginecológica</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>8 Exames:</strong> Creatina; Lipidograma; Glicemia de Jejum;
+                                                    Hemograma Completo; TGO; TGP; TSH; Urina I</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>2 Imagens:</strong> Ultrassom das mamas; Ultrasom
+                                                    transvaginal</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Exame clínico laboratorial:</strong> Papanicolau</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="valor">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <p class="vlr-mercado"><strike>R$ 638,00</strike></p>
+                                                <p>valor de mercado</p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <p class="txt-auxiliar">a partir de</p>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <p class="vlr-drhj">R$ 438,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="area-btn">
+                                    <a href="/resultado-checkup?tipo_atendimento=checkup&tipo_especialidade=2&local_atendimento=TODOS&endereco_id="><button type="button" class="btn btn-agendar-plano-2">Agendar</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div id="vantagens" class="area-vantagens">
                 <div class="container">
                     <div class="titulo-home">
@@ -555,11 +642,15 @@
                         <div class="item"><img src="/libs/home-template/img/parceiros/bela-vista.png" alt=""></div>
                         <div class="item"><img src="/libs/home-template/img/parceiros/biovida.png" alt=""></div>
                         <div class="item"><img src="/libs/home-template/img/parceiros/cardio-fitness.png" alt=""></div>
-                        <div class="item"><img src="/libs/home-template/img/parceiros/centro-clinico-lorena-de-fatima.png" alt=""></div>
+                        <div class="item">
+                            <img src="/libs/home-template/img/parceiros/centro-clinico-lorena-de-fatima.png" alt="">
+                        </div>
                         <div class="item"><img src="/libs/home-template/img/parceiros/cimed.png" alt=""></div>
                         <div class="item"><img src="/libs/home-template/img/parceiros/cinthia-rojas.png" alt=""></div>
-                        <div class="item"><img src="/libs/home-template/img/parceiros/clinica-fisio-evidence.png" alt=""></div>
-                        <div class="item"><img src="/libs/home-template/img/parceiros/clinica-vila-rica.png" alt=""></div>
+                        <div class="item">
+                            <img src="/libs/home-template/img/parceiros/clinica-fisio-evidence.png" alt=""></div>
+                        <div class="item"><img src="/libs/home-template/img/parceiros/clinica-vila-rica.png" alt="">
+                        </div>
                         <div class="item"><img src="/libs/home-template/img/parceiros/cliped.png" alt=""></div>
                         <div class="item"><img src="/libs/home-template/img/parceiros/crb.png" alt=""></div>
                         <div class="item"><img src="/libs/home-template/img/parceiros/digidoc.png" alt=""></div>
@@ -571,11 +662,13 @@
                         <div class="item"><img src="/libs/home-template/img/parceiros/ila.png" alt=""></div>
                         <div class="item"><img src="/libs/home-template/img/parceiros/implante-vida.png" alt=""></div>
                         <div class="item"><img src="/libs/home-template/img/parceiros/infinita.png" alt=""></div>
-                        <div class="item"><img src="/libs/home-template/img/parceiros/instituto-mulher.png" alt=""></div>
+                        <div class="item"><img src="/libs/home-template/img/parceiros/instituto-mulher.png" alt="">
+                        </div>
                         <div class="item"><img src="/libs/home-template/img/parceiros/icb.png" alt=""></div>
                         <div class="item"><img src="/libs/home-template/img/parceiros/dermaline.png" alt=""></div>
                         <div class="item"><img src="/libs/home-template/img/parceiros/micra.png" alt=""></div>
-                        <div class="item"><img src="/libs/home-template/img/parceiros/policlinica-mais.png" alt=""></div>
+                        <div class="item"><img src="/libs/home-template/img/parceiros/policlinica-mais.png" alt="">
+                        </div>
                         <div class="item"><img src="/libs/home-template/img/parceiros/santa-paula.png" alt=""></div>
                         <div class="item"><img src="/libs/home-template/img/parceiros/visao.png" alt=""></div>
                     </div>
@@ -609,20 +702,20 @@
              *
              *********************************/
 
-            $(document).ready(function(){
+            $(document).ready(function () {
                 $('.owl-carousel').owlCarousel({
-                    loop:true,
-                    margin:10,
-                    nav:true,
-                    responsive:{
-                        0:{
-                            items:3
+                    loop: true,
+                    margin: 10,
+                    nav: true,
+                    responsive: {
+                        0: {
+                            items: 3
                         },
-                        600:{
-                            items:4
+                        600: {
+                            items: 4
                         },
-                        1000:{
-                            items:8
+                        1000: {
+                            items: 8
                         }
                     }
                 })
