@@ -585,6 +585,11 @@ header .navbar-collapse {
     padding: 30px 30px 16px 30px;
 }
 
+.area-checkup .pacote-checkup .resumo .textos {
+    display: block;
+    min-height: 200px;
+}
+
 .area-checkup .pacote-checkup h3 {
     font-size: 24px;
     margin-bottom: 4px;
