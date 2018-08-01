@@ -3660,6 +3660,10 @@ footer ul li a:hover {
     .home-prestador .area-beneficios .lb2 {
         text-align: left;
     }
+    .area-checkup .pacote-checkup .resumo .textos {
+        display: block;
+        min-height: 246px;
+    }
 }
 
 @media only screen and (max-width: 991px) {
@@ -3828,6 +3832,10 @@ footer ul li a:hover {
     }
     .area-checkup .pacote-checkup {
         margin-bottom: 30px;
+    }
+    .area-checkup .pacote-checkup .resumo .textos {
+        display: block;
+        min-height: auto;
     }
 }
 
