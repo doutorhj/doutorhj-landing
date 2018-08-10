@@ -2590,6 +2590,49 @@ header .nav-item-mobile {
     font-weight: 600;
 }
 
+#checkup .nome-ckp p {
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    margin: 20px 0 20px 0;
+}
+
+#checkup .linha-resumo{
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+#checkup .titulo-resumo {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgb(69, 112, 172);
+}
+
+#checkup .dados-resumo {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgb(98, 98, 98);
+}
+
+#checkup .procedimentos p {
+    text-transform: uppercase;
+    color: #000;
+    font-size: 13px;
+    margin: 10px 0 10px 0;
+}
+
+#checkup .procedimentos ul li {
+    font-weight: 300;
+}
+
+#checkup .procedimentos ul li span {
+    font-weight: 600;
+}
+
+#checkup .procedimentos .col-md-9 {
+    margin-bottom: 10px;
+}
+
 /*********************************
 *
 *  14 HOME LOGADO
