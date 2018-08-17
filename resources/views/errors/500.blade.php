@@ -196,7 +196,7 @@
                 </div>
             </div>
             <div class="endereco-site">
-                <a href="/">www.doctorhoje.com.br</a>
+                <a href="/">www.doutorhoje.com.br</a>
             </div>
         </footer>        
     </div>

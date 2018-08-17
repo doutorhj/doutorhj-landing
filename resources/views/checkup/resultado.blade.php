@@ -1,5 +1,5 @@
 @extends('layouts.base')
-@section('title', 'DoctorHoje: Resultado')
+@section('title', 'DoutorHoje: Resultado')
 
 @push('scripts')
 	<script>
@@ -96,11 +96,11 @@
                                                           <span>R$ {{$checkup['total_vl_mercado']}}</span>
                                                       </div>
                                                       <div class="drhj">
-                                                          <p>Procedimentos individuais no Doctor Hoje</p>
+                                                          <p>Procedimentos individuais no Doutor Hoje</p>
                                                           <span>R$ {{$checkup['total_vl_individual']}}</span>
                                                       </div>
                                                       <div class="checkup">
-                                                          <p>Valor do Checkup DoctorHJ</p>
+                                                          <p>Valor do Checkup DoutorHJ</p>
                                                           <span>R$ {{$checkup['total_com_checkup']}}</span>
                                                           
                                                           <input type="hidden" id="vl_total_checkup" name="vl_total_checkup" value="{{ $checkup['total_com_checkup'] }}">

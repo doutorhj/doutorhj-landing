@@ -1,6 +1,6 @@
 @extends('layouts.base')
 
-@section('title', 'DoctorHJ: Login')
+@section('title', 'DoutorHJ: Login')
 
 @push('scripts')
 
@@ -153,7 +153,7 @@
                                         <input type="checkbox" class="form-check-input" id="termoCheck" required="required">
                                         <label class="form-check-label" for="termoCheck">Declaro que li e concordo com
                                             os <a href="#" data-toggle="modal" data-target="#modalTermos">termos de uso
-                                                do Doctor Hoje</a></label>
+                                                do Doutor Hoje</a></label>
                                     </div>
                                     <div class="form-check fc-checkbox">
                                         <input type="checkbox" class="form-check-input" id="termoAnuidade" required="required">
@@ -191,7 +191,7 @@
                     if ($('#inputEmailTelefone').val().length < 15) {
                         swal(
                             {
-                                title: '<div class="tit-sweet tit-error"><i class="fa fa-times-circle" aria-hidden="true"></i> DoctorHoje Informa:</div>',
+                                title: '<div class="tit-sweet tit-error"><i class="fa fa-times-circle" aria-hidden="true"></i> DoutorHoje Informa:</div>',
                                 text: 'O telefone informado não é válido'
                             }
                         );
@@ -227,7 +227,7 @@
 
                                 swal(
                                     {
-                                        title: '<div class="tit-sweet tit-error"><i class="fa fa-times-circle" aria-hidden="true"></i> DoctorHoje Informa:</div>',
+                                        title: '<div class="tit-sweet tit-error"><i class="fa fa-times-circle" aria-hidden="true"></i> DoutorHoje Informa:</div>',
                                         text: result.mensagem
                                     }
                                 );

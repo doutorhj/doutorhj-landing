@@ -256,7 +256,7 @@
                 </div>
             </div>
             <div class="endereco-site">
-                <a href="{{ route('landing-page') }}">doctorhoje.com.br</a>
+                <a href="{{ route('landing-page') }}">doutorhoje.com.br</a>
             </div>
         </footer>        
     </div>

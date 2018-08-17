@@ -25,7 +25,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <p class="vlr-drhj">R$ 350,00</p>
-                                    <p>Valor DoctorHJ</p>
+                                    <p>Valor DoutorHJ</p>
                                 </div>
                                 <div class="col-md-3">
                                     <p class="txtPorcentagem">Economize</p>
@@ -63,7 +63,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <p class="vlr-drhj">R$ 438,00</p>
-                                    <p>Valor DoctorHJ</p>
+                                    <p>Valor DoutorHJ</p>
                                 </div>
                                 <div class="col-md-3">
                                     <p class="txtPorcentagem">Economize</p>
@@ -113,7 +113,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <p class="vlr-drhj">R$ {{ number_format( $checkupMasculino->itemCheckups->sum('vl_com_checkup'),  2, ',', '.')  }}</p>
-                                    <p>Valor DoctorHJ</p>
+                                    <p>Valor DoutorHJ</p>
                                 </div>
                                 <div class="col-md-3">
                                     <p class="txtPorcentagem">Economize</p>
@@ -151,7 +151,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <p class="vlr-drhj">R$ {{ number_format( $checkupFeminino->itemCheckups->sum('vl_com_checkup'),  2, ',', '.')  }}</p>
-                                    <p>Valor DoctorHJ</p>
+                                    <p>Valor DoutorHJ</p>
                                 </div>
                                 <div class="col-md-3">
                                     <p class="txtPorcentagem">Economize</p>

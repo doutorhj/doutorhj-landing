@@ -1,6 +1,6 @@
 @extends('layouts.base')
 
-@section('title', 'DoctorHj: Minha Conta')
+@section('title', 'DoutorHj: Minha Conta')
 
 @push('scripts')
 
@@ -414,8 +414,8 @@
                                                     <p class="titulo">Aproveite seu desconto!</p>
                                                     <p class="texto">Você possui um cupom que garante <strong>10% de
                                                             desconto</strong> no seu primeiro agendamento feito pelo
-                                                        site Doctor Hoje. Aproveite, é por tempo limitado. Na tela de
-                                                        finalização de compra insira o código: <strong>DOCTOR10</strong>
+                                                        site Doutor Hoje. Aproveite, é por tempo limitado. Na tela de
+                                                        finalização de compra insira o código: <strong>DOuTOR10</strong>
                                                     </p>
                                                     <button type="button" class="close-div btn btn-secondary" title="Apagar mensagem">
                                                         <i class="fa fa-trash" aria-hidden="true"></i></button>
@@ -496,8 +496,8 @@
                             <div class="tab-pane fade" id="v-pills-sugestoes" role="tabpanel" aria-labelledby="v-pills-settings-tab">
                                 <div class="row">
                                     <div class="col-md-12 col-lg-6">
-                                        <span class="label-titulo">Avalie o Doctor Hoje</span>
-                                        <p>Deixe sua avaliação e nos ajude a deixar o Doctor Hoje melhor ainda.</p>
+                                        <span class="label-titulo">Avalie o Doutor Hoje</span>
+                                        <p>Deixe sua avaliação e nos ajude a deixar o Doutor Hoje melhor ainda.</p>
                                         <p>Dê uma nota de 1 a 5 estrelas para cada tópico abaixo, sendo 1 para
                                             péssimo e
                                             5 para excelente.</p>
@@ -579,7 +579,7 @@
                                     </div>
                                     <div class="col-md-12 col-lg-6">
                                         <span class="label-titulo">Mais alguma sugestão?</span>
-                                        <p>Deixe sua avaliação e nos ajude a deixar o Doctor Hoje melhor ainda.</p>
+                                        <p>Deixe sua avaliação e nos ajude a deixar o Doutor Hoje melhor ainda.</p>
                                         <form>
                                             <div class="form-group">
                                                 <textarea class="form-control" id="textareaSugestao" rows="6"></textarea>
@@ -594,7 +594,7 @@
 
                             <div class="tab-pane fade" id="v-pills-sair" role="tabpanel" aria-labelledby="v-pills-settings-tab">
                                 <div class="itens-sair">
-                                    <span class="label-titulo">Obrigado por usar o Doctor Hoje</span>
+                                    <span class="label-titulo">Obrigado por usar o Doutor Hoje</span>
                                 </div>
                                 <div class="itens-sair">
                                     <img src="/libs/home-template/img/doctor-hoje-notebook.png" alt="">
