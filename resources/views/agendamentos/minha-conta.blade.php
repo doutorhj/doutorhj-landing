@@ -18,8 +18,8 @@
                                 Cadastro</a>
                             <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-pagamento" role="tab" aria-controls="v-pills-profile" aria-selected="false"><i class="fa fa-caret-right"></i>
                                 Pagamento</a>
-                            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-anuidade" role="tab" aria-controls="v-pills-profile" aria-selected="false"><i class="fa fa-caret-right"></i>
-                                Anuidade</a>
+                            <!-- <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-anuidade" role="tab" aria-controls="v-pills-profile" aria-selected="false"><i class="fa fa-caret-right"></i>
+                                Anuidade</a> -->
                             <!-- <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-mensagens" role="tab" aria-controls="v-pills-messages" aria-selected="false"><i class="fa fa-caret-right"></i>
                                 Mensagens</a> -->
                             <!-- <a class="nav-link" id="v-pills-notifications-tab" data-toggle="pill" href="#v-pills-notificacoes" role="tab" aria-controls="v-pills-notifications" aria-selected="false"><i class="fa fa-caret-right"></i>

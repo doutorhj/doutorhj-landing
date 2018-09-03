@@ -155,7 +155,7 @@
                                             os <a href="#" data-toggle="modal" data-target="#modalTermos">termos de uso
                                                 do Doutor Hoje</a></label>
                                     </div>
-                                    <div class="form-check fc-checkbox">
+                                    {{--<div class="form-check fc-checkbox">
                                         <input type="checkbox" class="form-check-input" id="termoAnuidade" required="required">
                                         <label class="form-check-label" for="termoAnuidade">Declaro que estou ciente e
                                             de acordo com a cobrança da anuidade, que me possibilitará utilizar a
@@ -165,7 +165,7 @@
                                             24,40 ( vinte e quatro reais e quarenta centavos) no sétimo mês contados da
                                             data da minha inclusão na plataforma. Após 12 meses contados da data da
                                             minha inclusão pagarei o valor de 48,80 referente a anuidade. </label>
-                                    </div>
+                                    </div>--}}
                                     
                                     <button type="submit" id="btn-criar-conta" class="btn btn-vermelho btn-criar-conta">
                                         <i class="fa fa-user"></i>
